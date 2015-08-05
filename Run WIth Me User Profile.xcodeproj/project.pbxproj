@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		280D812C1B71757F00EAA685 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D812B1B71757F00EAA685 /* AppDelegate.swift */; };
+		280D812E1B71757F00EAA685 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D812D1B71757F00EAA685 /* ViewController.swift */; };
+		280D81311B71757F00EAA685 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280D812F1B71757F00EAA685 /* Main.storyboard */; };
+		280D81331B71757F00EAA685 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280D81321B71757F00EAA685 /* Images.xcassets */; };
+		280D81361B71757F00EAA685 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280D81341B71757F00EAA685 /* LaunchScreen.xib */; };
+		280D81421B71757F00EAA685 /* Run_WIth_Me_User_ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D81411B71757F00EAA685 /* Run_WIth_Me_User_ProfileTests.swift */; };
+		28D364981B7290A8006A4BF1 /* UsersInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D364971B7290A8006A4BF1 /* UsersInfoTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		280D813C1B71757F00EAA685 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 280D811E1B71757E00EAA685 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 280D81251B71757E00EAA685;
+			remoteInfo = "Run WIth Me User Profile";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		280D81261B71757F00EAA685 /* Run WIth Me User Profile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Run WIth Me User Profile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		280D812A1B71757F00EAA685 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		280D812B1B71757F00EAA685 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		280D812D1B71757F00EAA685 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		280D81301B71757F00EAA685 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		280D81321B71757F00EAA685 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		280D81351B71757F00EAA685 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		280D813B1B71757F00EAA685 /* Run WIth Me User ProfileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Run WIth Me User ProfileTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		280D81401B71757F00EAA685 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		280D81411B71757F00EAA685 /* Run_WIth_Me_User_ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run_WIth_Me_User_ProfileTests.swift; sourceTree = "<group>"; };
+		28D364971B7290A8006A4BF1 /* UsersInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersInfoTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		280D81231B71757E00EAA685 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		280D81381B71757F00EAA685 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		280D811D1B71757E00EAA685 = {
+			isa = PBXGroup;
+			children = (
+				280D81281B71757F00EAA685 /* Run WIth Me User Profile */,
+				280D813E1B71757F00EAA685 /* Run WIth Me User ProfileTests */,
+				280D81271B71757F00EAA685 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		280D81271B71757F00EAA685 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				280D81261B71757F00EAA685 /* Run WIth Me User Profile.app */,
+				280D813B1B71757F00EAA685 /* Run WIth Me User ProfileTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		280D81281B71757F00EAA685 /* Run WIth Me User Profile */ = {
+			isa = PBXGroup;
+			children = (
+				280D812B1B71757F00EAA685 /* AppDelegate.swift */,
+				280D812D1B71757F00EAA685 /* ViewController.swift */,
+				280D812F1B71757F00EAA685 /* Main.storyboard */,
+				28D364971B7290A8006A4BF1 /* UsersInfoTableViewController.swift */,
+				280D81321B71757F00EAA685 /* Images.xcassets */,
+				280D81341B71757F00EAA685 /* LaunchScreen.xib */,
+				280D81291B71757F00EAA685 /* Supporting Files */,
+			);
+			path = "Run WIth Me User Profile";
+			sourceTree = "<group>";
+		};
+		280D81291B71757F00EAA685 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				280D812A1B71757F00EAA685 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		280D813E1B71757F00EAA685 /* Run WIth Me User ProfileTests */ = {
+			isa = PBXGroup;
+			children = (
+				280D81411B71757F00EAA685 /* Run_WIth_Me_User_ProfileTests.swift */,
+				280D813F1B71757F00EAA685 /* Supporting Files */,
+			);
+			path = "Run WIth Me User ProfileTests";
+			sourceTree = "<group>";
+		};
+		280D813F1B71757F00EAA685 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				280D81401B71757F00EAA685 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		280D81251B71757E00EAA685 /* Run WIth Me User Profile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 280D81451B71757F00EAA685 /* Build configuration list for PBXNativeTarget "Run WIth Me User Profile" */;
+			buildPhases = (
+				280D81221B71757E00EAA685 /* Sources */,
+				280D81231B71757E00EAA685 /* Frameworks */,
+				280D81241B71757E00EAA685 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Run WIth Me User Profile";
+			productName = "Run WIth Me User Profile";
+			productReference = 280D81261B71757F00EAA685 /* Run WIth Me User Profile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		280D813A1B71757F00EAA685 /* Run WIth Me User ProfileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 280D81481B71757F00EAA685 /* Build configuration list for PBXNativeTarget "Run WIth Me User ProfileTests" */;
+			buildPhases = (
+				280D81371B71757F00EAA685 /* Sources */,
+				280D81381B71757F00EAA685 /* Frameworks */,
+				280D81391B71757F00EAA685 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				280D813D1B71757F00EAA685 /* PBXTargetDependency */,
+			);
+			name = "Run WIth Me User ProfileTests";
+			productName = "Run WIth Me User ProfileTests";
+			productReference = 280D813B1B71757F00EAA685 /* Run WIth Me User ProfileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		280D811E1B71757E00EAA685 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = Robert;
+				TargetAttributes = {
+					280D81251B71757E00EAA685 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					280D813A1B71757F00EAA685 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 280D81251B71757E00EAA685;
+					};
+				};
+			};
+			buildConfigurationList = 280D81211B71757E00EAA685 /* Build configuration list for PBXProject "Run WIth Me User Profile" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 280D811D1B71757E00EAA685;
+			productRefGroup = 280D81271B71757F00EAA685 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				280D81251B71757E00EAA685 /* Run WIth Me User Profile */,
+				280D813A1B71757F00EAA685 /* Run WIth Me User ProfileTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		280D81241B71757E00EAA685 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				280D81311B71757F00EAA685 /* Main.storyboard in Resources */,
+				280D81361B71757F00EAA685 /* LaunchScreen.xib in Resources */,
+				280D81331B71757F00EAA685 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		280D81391B71757F00EAA685 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		280D81221B71757E00EAA685 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				280D812E1B71757F00EAA685 /* ViewController.swift in Sources */,
+				28D364981B7290A8006A4BF1 /* UsersInfoTableViewController.swift in Sources */,
+				280D812C1B71757F00EAA685 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		280D81371B71757F00EAA685 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				280D81421B71757F00EAA685 /* Run_WIth_Me_User_ProfileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		280D813D1B71757F00EAA685 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 280D81251B71757E00EAA685 /* Run WIth Me User Profile */;
+			targetProxy = 280D813C1B71757F00EAA685 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		280D812F1B71757F00EAA685 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				280D81301B71757F00EAA685 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		280D81341B71757F00EAA685 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				280D81351B71757F00EAA685 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		280D81431B71757F00EAA685 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		280D81441B71757F00EAA685 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		280D81461B71757F00EAA685 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Run WIth Me User Profile/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		280D81471B71757F00EAA685 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Run WIth Me User Profile/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		280D81491B71757F00EAA685 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Run WIth Me User ProfileTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Run WIth Me User Profile.app/Run WIth Me User Profile";
+			};
+			name = Debug;
+		};
+		280D814A1B71757F00EAA685 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Run WIth Me User ProfileTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Run WIth Me User Profile.app/Run WIth Me User Profile";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		280D81211B71757E00EAA685 /* Build configuration list for PBXProject "Run WIth Me User Profile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				280D81431B71757F00EAA685 /* Debug */,
+				280D81441B71757F00EAA685 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		280D81451B71757F00EAA685 /* Build configuration list for PBXNativeTarget "Run WIth Me User Profile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				280D81461B71757F00EAA685 /* Debug */,
+				280D81471B71757F00EAA685 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		280D81481B71757F00EAA685 /* Build configuration list for PBXNativeTarget "Run WIth Me User ProfileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				280D81491B71757F00EAA685 /* Debug */,
+				280D814A1B71757F00EAA685 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 280D811E1B71757E00EAA685 /* Project object */;
+}
