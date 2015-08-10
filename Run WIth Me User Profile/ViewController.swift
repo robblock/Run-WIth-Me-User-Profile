@@ -8,12 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate {
+
+    var usersBio: UsersBio!
     
-    
+    //creating empty array to store users information -- Comment out when we have userlogin and setup feature set up.
+    var bio:[UsersBio] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = self.usersBio.name
         
         //usersPicture
         userPicture.userInteractionEnabled = true
@@ -23,6 +29,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         //experienceBar - Starting at 0
         experienceBar.setProgress(0, animated: true)
+
     }
     
     //MARK: -ImagePicker
@@ -61,16 +68,32 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     //MARK: -TableView Datasource & Delegates
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cellIdentifier = "Cell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UserDetailTableViewCell
+        
+        //configure the cell
+        let userBio = bio[indexPath.row]
+        cell.backgroundColor = UIColor.clearColor()
+        cell.genderLabel.text = userBio.gender
+        cell.ageLabel.text = String(stringInterpolationSegment: userBio.age)
+        
+        return cell
+    }
     
     
-    //MARK: -Outlets
+    //MARK: -Actions & Outlets
     @IBOutlet weak var experienceBar: UIProgressView!
     @IBOutlet weak var userPicture: UIImageView!
+    
+    
     @IBOutlet weak var tableViewOne: UITableView!
-    @IBOutlet weak var tableViewTwo: UITableView!
     
-    
-    //Actions
     @IBAction func callButton(sender: AnyObject) {
         //TODO: setup backend
     }
