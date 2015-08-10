@@ -19,6 +19,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Setting the screens title label as the users name
         title = self.usersBio.name
         
         //usersPicture
@@ -29,6 +30,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         //experienceBar - Starting at 0
         experienceBar.setProgress(0, animated: true)
+        
+        //Configuring tableViewCells
+        tableViewOne.estimatedRowHeight = 36.0
+        tableViewOne.rowHeight = UITableViewAutomaticDimension
+        
+        self.tableViewOne.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.2)
+        self.tableViewOne.separatorColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.8)
+        self.tableViewOne.tableFooterView = UIView(frame: CGRectZero)
 
     }
     
@@ -77,12 +86,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let cellIdentifier = "Cell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UserDetailTableViewCell
         
-        //configure the cell
-        let userBio = bio[indexPath.row]
-        cell.backgroundColor = UIColor.clearColor()
-        cell.genderLabel.text = userBio.gender
-        cell.ageLabel.text = String(stringInterpolationSegment: userBio.age)
         
+        //configure the cell
+        cell.backgroundColor = UIColor.clearColor()
+        
+        switch indexPath.row {
+        case 0:
+            cell.fieldLabel.text = "Age"
+            cell.valueLabel.text = "\(usersBio.age)"
+        case 1:
+            cell.fieldLabel.text = "Height"
+            cell.valueLabel.text = "\(usersBio.height)"
+        case 2:
+            cell.fieldLabel.text = "Gender"
+            cell.valueLabel.text = usersBio.gender
+        case 3:
+            cell.fieldLabel.text = "Average Pace"
+            cell.valueLabel.text = "\(usersBio.averagePace)"
+        default:
+            cell.fieldLabel.text = ""
+            cell.valueLabel.text = ""
+        }
         return cell
     }
     
@@ -90,7 +114,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     //MARK: -Actions & Outlets
     @IBOutlet weak var experienceBar: UIProgressView!
     @IBOutlet weak var userPicture: UIImageView!
-    
     
     @IBOutlet weak var tableViewOne: UITableView!
     

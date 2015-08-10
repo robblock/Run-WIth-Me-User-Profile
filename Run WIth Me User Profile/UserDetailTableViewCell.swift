@@ -10,9 +10,7 @@ import UIKit
 
 class UserDetailTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var heightLabel: UIView!
-    @IBOutlet weak var ageLabel: UILabel!
-    @IBOutlet weak var genderLabel: UILabel!
-    @IBOutlet weak var averagePaceLabel: UILabel!
+    @IBOutlet weak var fieldLabel: UILabel!
+    @IBOutlet weak var valueLabel: UILabel!
 
 }
