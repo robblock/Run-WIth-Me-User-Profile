@@ -43,6 +43,7 @@ class MoreDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         //configure the cell
         cell.backgroundColor = UIColor.clearColor()
         
+        //Creating extra switches just incase we decide to add in more fields
         switch indexPath.row {
         case 0:
             cell.fieldLabel.text = "Total Number of Runs"
@@ -50,7 +51,6 @@ class MoreDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         case 1:
             cell.fieldLabel.text = "Total Distance"
             cell.valueLabel.text = "\(usersBio.totalDistance)"
-        //Creating switches just incase
         case 3:
             cell.fieldLabel.text = ""
             cell.valueLabel.text = ""

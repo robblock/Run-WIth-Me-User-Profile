@@ -18,10 +18,13 @@ class UsersBio {
     var averagePace:Double?
     var totalNumberOfRuns:Int?
     var totalDistance:Double?
+    var numberOfGroups:Int?
+    var numberOfFriends:Int?
+    var timeSinceLastRun:NSDate
     
     
     
-    init(name:String, hometown:String, mainGroup:String, height:Double, age:Int, gender:String, averagePace:Double, totalNumberOfRuns:Int, totalDistance:Double) {
+    init(name:String, hometown:String, mainGroup:String, height:Double, age:Int, gender:String, averagePace:Double, totalNumberOfRuns:Int, totalDistance:Double, numberOfGroups:Int, numberOfFriends:Int, timeSinceLastRun:NSDate) {
         self.name = name
         self.hometown = hometown
         self.mainGroup = mainGroup
@@ -31,5 +34,9 @@ class UsersBio {
         self.averagePace = averagePace
         self.totalNumberOfRuns = totalNumberOfRuns
         self.totalDistance = totalDistance
+        self.numberOfFriends = numberOfFriends
+        self.numberOfGroups = numberOfGroups
+        self.numberOfFriends = numberOfFriends
+        self.timeSinceLastRun = timeSinceLastRun
     }
 }

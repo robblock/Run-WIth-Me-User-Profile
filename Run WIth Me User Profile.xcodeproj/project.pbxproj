@@ -15,6 +15,8 @@
 		280D81421B71757F00EAA685 /* Run_WIth_Me_User_ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D81411B71757F00EAA685 /* Run_WIth_Me_User_ProfileTests.swift */; };
 		2812752B1B7940C8005150AD /* UserDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2812752A1B7940C8005150AD /* UserDetailTableViewCell.swift */; };
 		2812752D1B79663B005150AD /* MoreDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2812752C1B79663B005150AD /* MoreDetailViewController.swift */; };
+		281275301B797C9B005150AD /* UsersFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2812752E1B797C9B005150AD /* UsersFeedViewController.swift */; };
+		281275311B797C9B005150AD /* UsersFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2812752F1B797C9B005150AD /* UsersFeedViewController.xib */; };
 		28E9C4871B73F4CE00A7144E /* Users Bio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E9C4861B73F4CE00A7144E /* Users Bio.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		280D81411B71757F00EAA685 /* Run_WIth_Me_User_ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run_WIth_Me_User_ProfileTests.swift; sourceTree = "<group>"; };
 		2812752A1B7940C8005150AD /* UserDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewCell.swift; sourceTree = "<group>"; };
 		2812752C1B79663B005150AD /* MoreDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreDetailViewController.swift; sourceTree = "<group>"; };
+		2812752E1B797C9B005150AD /* UsersFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersFeedViewController.swift; sourceTree = "<group>"; };
+		2812752F1B797C9B005150AD /* UsersFeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsersFeedViewController.xib; sourceTree = "<group>"; };
 		28E9C4861B73F4CE00A7144E /* Users Bio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Users Bio.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +91,8 @@
 				280D812D1B71757F00EAA685 /* ViewController.swift */,
 				2812752A1B7940C8005150AD /* UserDetailTableViewCell.swift */,
 				280D812F1B71757F00EAA685 /* Main.storyboard */,
+				2812752E1B797C9B005150AD /* UsersFeedViewController.swift */,
+				2812752F1B797C9B005150AD /* UsersFeedViewController.xib */,
 				2812752C1B79663B005150AD /* MoreDetailViewController.swift */,
 				28E9C4861B73F4CE00A7144E /* Users Bio.swift */,
 				280D81321B71757F00EAA685 /* Images.xcassets */,
@@ -202,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				280D81311B71757F00EAA685 /* Main.storyboard in Resources */,
+				281275311B797C9B005150AD /* UsersFeedViewController.xib in Resources */,
 				280D81361B71757F00EAA685 /* LaunchScreen.xib in Resources */,
 				280D81331B71757F00EAA685 /* Images.xcassets in Resources */,
 			);
@@ -226,6 +233,7 @@
 				2812752D1B79663B005150AD /* MoreDetailViewController.swift in Sources */,
 				28E9C4871B73F4CE00A7144E /* Users Bio.swift in Sources */,
 				280D812C1B71757F00EAA685 /* AppDelegate.swift in Sources */,
+				281275301B797C9B005150AD /* UsersFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
