@@ -14,12 +14,16 @@ class MoreDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     var userName = String()
     var usersBio: UsersBio!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = self.userName
         
         //Configuring tableViewCells
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: nil, action: nil)
+        
         moreDetailTableView.estimatedRowHeight = 36.0
         moreDetailTableView.rowHeight = UITableViewAutomaticDimension
         

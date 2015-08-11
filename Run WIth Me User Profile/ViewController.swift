@@ -40,8 +40,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.tableViewOne.tableFooterView = UIView(frame: CGRectZero)
 
     }
+
     
-    //MARK: -ImagePicker
+    //MARK: - ImagePicker
     let recognizer = UITapGestureRecognizer()
     let imagePicker = UIImagePickerController()
     
@@ -61,7 +62,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         dismissViewControllerAnimated(true, completion: nil) //3
     }
     
-    //MARK: -ExperienceBar
+    //MARK: - ExperienceBar
     var progress:Int = 0 {
         didSet {
             let fractionalProgress = Float(progress) / 100.0
@@ -76,7 +77,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     
-    //MARK: -TableView Datasource & Delegates
+    //MARK: - TableView Datasource & Delegates
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
@@ -128,8 +129,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
+    //MARK: - Date Since Last..
+    var timeSinceLastRun = Tempo { (newTemp) -> () in
+        newTemp.years = 2014
+        newTemp.months = 12
+        newTemp.days = 12
+    }
+    
+    
 
-    //MARK: -Actions & Outlets
+    //MARK: - Actions & Outlets
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var hometownLabel: UILabel!
+
     @IBOutlet weak var experienceBar: UIProgressView!
     @IBOutlet weak var userPicture: UIImageView!
     

@@ -12,6 +12,13 @@ import MapKit
 class UsersFeedTableViewCell: UITableViewCell {
 
     @IBOutlet weak var mapOfLastRun: MKMapView!
+    var date = Tempo { (newTemp) -> () in
+        newTemp.years = 2014
+        newTemp.months = 10
+        newTemp.days = 25
+    }
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
