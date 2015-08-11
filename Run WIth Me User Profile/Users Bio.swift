@@ -39,4 +39,5 @@ class UsersBio {
         self.numberOfFriends = numberOfFriends
         self.timeSinceLastRun = timeSinceLastRun
     }
+    
 }

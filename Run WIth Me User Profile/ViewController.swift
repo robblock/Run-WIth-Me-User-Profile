@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftMoment
 
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate {

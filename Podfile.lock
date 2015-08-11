@@ -1,0 +1,10 @@
+PODS:
+  - SwiftMoment (0.1.2)
+
+DEPENDENCIES:
+  - SwiftMoment
+
+SPEC CHECKSUMS:
+  SwiftMoment: a439fccf86c8f3367557e406204c93ec1269c8c5
+
+COCOAPODS: 0.37.2
