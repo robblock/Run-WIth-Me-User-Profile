@@ -8,17 +8,21 @@
 
 import UIKit
 import MapKit
+import SwiftMoment
 
 class UsersFeedTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var mapOfLastRun: MKMapView!
-    var date = Tempo { (newTemp) -> () in
-        newTemp.years = 2014
-        newTemp.months = 10
-        newTemp.days = 25
+    //MARK: - Time
+    
+    let now = moment(timeZone: NSTimeZone.localTimeZone(), locale: NSLocale.currentLocale())
+    
+    func configureTimeLabel() {
+        timeSinceLabel.text = "\(now)"
     }
     
+    //MARK: - Distance
     
+    //MARK: - Map
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,9 +35,10 @@ class UsersFeedTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    //MARK: -Actions & Outlets
+    //MARK: - Actions & Outlets
     
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
- 
+    @IBOutlet weak var mapOfLastRun: MKMapView!
+    @IBOutlet weak var timeSinceLabel: UILabel!
 }
