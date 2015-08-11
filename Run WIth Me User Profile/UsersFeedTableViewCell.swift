@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import MapKit
 
 class UsersFeedTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var mapOfLastRun: MKMapView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +24,9 @@ class UsersFeedTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    //MARK: -Actions & Outlets
+    
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
+ 
 }
