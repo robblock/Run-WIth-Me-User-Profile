@@ -78,7 +78,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     //MARK: -TableView Datasource & Delegates
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -103,6 +103,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         case 3:
             cell.fieldLabel.text = "Average Pace"
             cell.valueLabel.text = "\(usersBio.averagePace)"
+        case 4:
+            cell.fieldLabel.text = "More Details"
+            cell.valueLabel.text = ""
+            cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+            
         default:
             cell.fieldLabel.text = ""
             cell.valueLabel.text = ""
@@ -110,7 +115,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return cell
     }
     
+    //If last cell is tapped segue to MoreDetailViewController
+    func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
+        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+            if segue.identifier == "MoreDetail" {
+                if let indexPath = self.tableViewOne.indexPathForSelectedRow() {
+                    let destinationController = segue.destinationViewController as! MoreDetailViewController
+                    destinationController.userName = usersBio.name
+                }
+            }
+        }
+        
+    }
     
+
     //MARK: -Actions & Outlets
     @IBOutlet weak var experienceBar: UIProgressView!
     @IBOutlet weak var userPicture: UIImageView!
