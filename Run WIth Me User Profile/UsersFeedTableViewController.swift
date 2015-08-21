@@ -10,7 +10,9 @@ import UIKit
 
 class UsersFeedTableViewController: UITableViewController {
     
-    var feedData = []
+    //TODO: Setup Xib
+    
+    var feedData: [String] = ["Run1", "Run 2", "Run3"]
     var data: FeedData!
 
     override func viewDidLoad() {
@@ -32,7 +34,11 @@ class UsersFeedTableViewController: UITableViewController {
         let cellIdentifier = "Cell"
         
         var cell:UsersFeedTableViewCell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! UsersFeedTableViewCell
-
+        
+        cell.distanceLabel.text = feedData[indexPath.row]
+        cell.durationLabel.text = feedData[indexPath.row]
+        cell.timeSinceLabel.text = feedData[indexPath.row]
+        cell.dateOfRunLabel.text = feedData[indexPath.row]
 
         return cell
     }

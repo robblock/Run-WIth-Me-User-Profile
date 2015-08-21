@@ -21,10 +21,11 @@ class UsersBio {
     var numberOfGroups:Int?
     var numberOfFriends:Int?
     var timeSinceLastRun:NSDate
+    var totalNumberOfGroups:Int?
     
     
     
-    init(name:String, hometown:String, mainGroup:String, height:Double, age:Int, gender:String, averagePace:Double, totalNumberOfRuns:Int, totalDistance:Double, numberOfGroups:Int, numberOfFriends:Int, timeSinceLastRun:NSDate) {
+    init(name:String, hometown:String, mainGroup:String, height:Double, age:Int, gender:String, averagePace:Double, totalNumberOfRuns:Int, totalDistance:Double, numberOfGroups:Int, numberOfFriends:Int, timeSinceLastRun:NSDate, totalNumberOfGroups:Int) {
         self.name = name
         self.hometown = hometown
         self.mainGroup = mainGroup
@@ -38,6 +39,22 @@ class UsersBio {
         self.numberOfGroups = numberOfGroups
         self.numberOfFriends = numberOfFriends
         self.timeSinceLastRun = timeSinceLastRun
+        self.totalNumberOfGroups = totalNumberOfGroups
     }
     
+}
+
+class TotalCaloriesBurned {
+    var weight:Double?
+    var height:Double?
+    var age:Int?
+    var distance:Double?
+    
+    init(weight:Double, height:Double, age:Int, distance:Double) {
+        self.weight = weight
+        self.height = height
+        self.age = age
+        self.distance = distance
+        
+    }
 }

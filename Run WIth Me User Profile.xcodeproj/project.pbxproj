@@ -20,6 +20,16 @@
 		2812753B1B7998EF005150AD /* UsersFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2812753A1B7998EF005150AD /* UsersFeedTableViewController.swift */; };
 		2812753D1B79A056005150AD /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2812753C1B79A056005150AD /* FeedData.swift */; };
 		2812753F1B79C39D005150AD /* tempo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2812753E1B79C39D005150AD /* tempo.swift */; };
+		281275451B7DA089005150AD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 281275441B7DA089005150AD /* AudioToolbox.framework */; };
+		281275471B7DA091005150AD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 281275461B7DA091005150AD /* CFNetwork.framework */; };
+		281275491B7DA098005150AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 281275481B7DA098005150AD /* CoreGraphics.framework */; };
+		2812754B1B7DA0A1005150AD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2812754A1B7DA0A1005150AD /* CoreLocation.framework */; };
+		2812754D1B7DA0AA005150AD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2812754C1B7DA0AA005150AD /* QuartzCore.framework */; };
+		2812754F1B7DA0B0005150AD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2812754E1B7DA0B0005150AD /* Security.framework */; };
+		281275511B7DA0B4005150AD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 281275501B7DA0B4005150AD /* StoreKit.framework */; };
+		281275531B7DA0C5005150AD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 281275521B7DA0C5005150AD /* SystemConfiguration.framework */; };
+		281275551B7DA0CF005150AD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 281275541B7DA0CF005150AD /* libz.dylib */; };
+		281275571B7DA0EB005150AD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 281275561B7DA0EB005150AD /* libsqlite3.dylib */; };
 		28E9C4871B73F4CE00A7144E /* Users Bio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E9C4861B73F4CE00A7144E /* Users Bio.swift */; };
 		F5080C96CFA94C7D865D1D12 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CE65D5990203A756F0A378 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -52,6 +62,16 @@
 		2812753A1B7998EF005150AD /* UsersFeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersFeedTableViewController.swift; sourceTree = "<group>"; };
 		2812753C1B79A056005150AD /* FeedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
 		2812753E1B79C39D005150AD /* tempo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = tempo.swift; path = "../../../../Downloads/Tempo-master/tempoExample/updateTempo/tempo.swift"; sourceTree = "<group>"; };
+		281275441B7DA089005150AD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		281275461B7DA091005150AD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		281275481B7DA098005150AD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2812754A1B7DA0A1005150AD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2812754C1B7DA0AA005150AD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2812754E1B7DA0B0005150AD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		281275501B7DA0B4005150AD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		281275521B7DA0C5005150AD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		281275541B7DA0CF005150AD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		281275561B7DA0EB005150AD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		28E9C4861B73F4CE00A7144E /* Users Bio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Users Bio.swift"; sourceTree = "<group>"; };
 		3B554D5EB706AD1EA3D151A0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		60CE65D5990203A756F0A378 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +83,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				281275571B7DA0EB005150AD /* libsqlite3.dylib in Frameworks */,
+				281275551B7DA0CF005150AD /* libz.dylib in Frameworks */,
+				281275531B7DA0C5005150AD /* SystemConfiguration.framework in Frameworks */,
+				281275511B7DA0B4005150AD /* StoreKit.framework in Frameworks */,
+				2812754F1B7DA0B0005150AD /* Security.framework in Frameworks */,
+				2812754D1B7DA0AA005150AD /* QuartzCore.framework in Frameworks */,
+				2812754B1B7DA0A1005150AD /* CoreLocation.framework in Frameworks */,
+				281275491B7DA098005150AD /* CoreGraphics.framework in Frameworks */,
+				281275471B7DA091005150AD /* CFNetwork.framework in Frameworks */,
+				281275451B7DA089005150AD /* AudioToolbox.framework in Frameworks */,
 				F5080C96CFA94C7D865D1D12 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,9 +132,9 @@
 			children = (
 				281275401B79C3B0005150AD /* Tempo */,
 				280D812B1B71757F00EAA685 /* AppDelegate.swift */,
-				280D812D1B71757F00EAA685 /* ViewController.swift */,
 				2812752A1B7940C8005150AD /* UserDetailTableViewCell.swift */,
 				280D812F1B71757F00EAA685 /* Main.storyboard */,
+				280D812D1B71757F00EAA685 /* ViewController.swift */,
 				2812752C1B79663B005150AD /* MoreDetailViewController.swift */,
 				2812753A1B7998EF005150AD /* UsersFeedTableViewController.swift */,
 				281275361B797D42005150AD /* UsersFeedTableViewCell.swift */,
@@ -162,6 +192,16 @@
 		6F412B0FA5A1B8F8912D9375 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				281275561B7DA0EB005150AD /* libsqlite3.dylib */,
+				281275541B7DA0CF005150AD /* libz.dylib */,
+				281275521B7DA0C5005150AD /* SystemConfiguration.framework */,
+				281275501B7DA0B4005150AD /* StoreKit.framework */,
+				2812754E1B7DA0B0005150AD /* Security.framework */,
+				2812754C1B7DA0AA005150AD /* QuartzCore.framework */,
+				2812754A1B7DA0A1005150AD /* CoreLocation.framework */,
+				281275481B7DA098005150AD /* CoreGraphics.framework */,
+				281275461B7DA091005150AD /* CFNetwork.framework */,
+				281275441B7DA089005150AD /* AudioToolbox.framework */,
 				60CE65D5990203A756F0A378 /* Pods.framework */,
 			);
 			name = Frameworks;

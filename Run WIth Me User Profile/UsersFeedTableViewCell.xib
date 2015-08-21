@@ -53,14 +53,30 @@
                         <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time Since" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycX-dM-CUU">
-                        <rect key="frame" x="8" y="188" width="86" height="21"/>
+                        <rect key="frame" x="613" y="188" width="86" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date of Run" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZB-ts-0cw">
+                        <rect key="frame" x="8" y="188" width="92" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3D-rc-h9L">
+                        <rect key="frame" x="330" y="184" width="40" height="30"/>
+                        <state key="normal" title="Share">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="shareButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="XsD-qe-OFH"/>
+                        </connections>
+                    </button>
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="dateOfRunLabel" destination="lZB-ts-0cw" id="s40-tQ-nC3"/>
                 <outlet property="distanceLabel" destination="A6m-YQ-TT1" id="7CB-Yg-Ohv"/>
                 <outlet property="durationLabel" destination="s0T-6p-LJf" id="U9B-rd-Xoe"/>
                 <outlet property="mapOfLastRun" destination="Uge-Yo-HYY" id="dYa-d5-2UF"/>

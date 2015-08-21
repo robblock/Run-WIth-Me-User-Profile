@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import Parse
+import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
@@ -20,11 +23,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         if let barFont = UIFont(name: "AvenirNextCondensed-DemiBold", size: 22.0) {
             UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(), NSFontAttributeName:barFont]
+            
+            // [Optional] Power your app with Local Datastore. For more info, go to
+            // https://parse.com/docs/ios_guide#localdatastore/iOS
+            Parse.enableLocalDatastore()
+            
+            // Initialize Parse.
+            Parse.setApplicationId("eDmRZL28soS1RYEFJIby0oWvlOAKiFDZudmaUnAJ",
+                clientKey: "hrW9XIh4JPQ5heLpBy07biokWFi3Me9gBFRU5CcA")
+            
+            // [Optional] Track statistics around application opens.
+            PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+            
+            // ...
         }
+        
+        
         
         return true
     }
 
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        // [Optional] Power your app with Local Datastore. For more info, go to
+        // https://parse.com/docs/ios_guide#localdatastore/iOS
+        Parse.enableLocalDatastore()
+        
+        // Initialize Parse.
+        Parse.setApplicationId("eDmRZL28soS1RYEFJIby0oWvlOAKiFDZudmaUnAJ",
+            clientKey: "hrW9XIh4JPQ5heLpBy07biokWFi3Me9gBFRU5CcA")
+        
+        // [Optional] Track statistics around application opens.
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
+        // ...
+    }
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

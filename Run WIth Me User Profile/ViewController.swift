@@ -8,11 +8,14 @@
 
 import UIKit
 import SwiftMoment
+import HealthKit
 
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate {
 
     var usersBio: UsersBio!
+    var totalCaloriesBurned: TotalCaloriesBurned!
+
     
     //creating empty array to store users information -- Comment out when we have userlogin and setup feature set up.
     var bio:[UsersBio] = []
@@ -33,12 +36,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         experienceBar.setProgress(0, animated: true)
         
         //Configuring tableViewCells
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: nil, action: nil)
+        
         tableViewOne.estimatedRowHeight = 36.0
         tableViewOne.rowHeight = UITableViewAutomaticDimension
         
         self.tableViewOne.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.2)
         self.tableViewOne.separatorColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.8)
         self.tableViewOne.tableFooterView = UIView(frame: CGRectZero)
+        
+        let testObject = PFObject(className: "TestObject")
+        testObject["foo"] = "bar"
+        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            println("Object has been saved.")
+        }
 
     }
 
@@ -64,18 +75,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     //MARK: - ExperienceBar
-    var progress:Int = 0 {
-        didSet {
-            let fractionalProgress = Float(progress) / 100.0
-            let animated = progress != 0
-            
-            experienceBar.setProgress(fractionalProgress, animated: animated)
-        }
+    func updateProgress() {
+        experienceBar.progress += 0.05
+        let progressValue = self.experienceBar?.progress
+        progressLabel.text = "\(progressValue! * 100)"
     }
     
-    func updateExperienceBar() {
-        //Work on this after we have backend setup
-    }
+    //TODO: Link to backend
     
     
     //MARK: - TableView Datasource & Delegates
@@ -94,18 +100,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         switch indexPath.row {
         case 0:
-            cell.fieldLabel.text = "Age"
-            cell.valueLabel.text = "\(usersBio.age)"
+            cell.fieldLabel.text = "Total Distance"
+            cell.valueLabel.text = "\(usersBio.totalDistance)"
         case 1:
-            cell.fieldLabel.text = "Height"
-            cell.valueLabel.text = "\(usersBio.height)"
+            cell.fieldLabel.text = "Number of Groups"
+            cell.valueLabel.text = "\(usersBio.numberOfGroups)"
         case 2:
-            cell.fieldLabel.text = "Gender"
+            cell.fieldLabel.text = "Total Time Running"
             cell.valueLabel.text = usersBio.gender
         case 3:
             cell.fieldLabel.text = "Average Pace"
             cell.valueLabel.text = "\(usersBio.averagePace)"
-        case 4:
+            case 4:
+            cell.fieldLabel.text = "Total Number of Runs"
+            cell.valueLabel.text = "\(usersBio.totalNumberOfRuns)"
+        case 5:
             cell.fieldLabel.text = "More Details"
             cell.valueLabel.text = ""
             cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
@@ -130,21 +139,79 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
-    //MARK: - Date Since Last..
-    var timeSinceLastRun = Tempo { (newTemp) -> () in
-        newTemp.years = 2014
-        newTemp.months = 12
-        newTemp.days = 12
-    }
+    //Mark: - Picker
     
+
+    //MARK: - Date Since Last..
+    let timeOfRun = moment([], timeZone: NSTimeZone.localTimeZone(), locale: NSLocale.currentLocale())
+    let now = moment(timeZone: NSTimeZone.localTimeZone(), locale: NSLocale.currentLocale())
+    
+//    func configureDateAndTimeLabel() {
+//        timeSinceLabel.text = "\(timeOfRun! - now)"
+//        println("\(timeOfRun! - now)")
+//    }
+    
+    //MARK: - Health Data
+    let heightQuantity = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeight)
+    let weightQuantity = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)
+    let heartRateQuantityt = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate)
+    
+    lazy var healthStore = HKHealthStore()
+    
+    lazy var typesToShare: NSSet = {
+        return NSSet(object: self.heightQuantity, self.weightQuantity)
+        }()
+    
+    lazy var typesToRead: NSSet = {
+        return  NSSet(object: self.heightQuantity, self.weightQUantity, self.heartRateQuantity)
+        }()
+    
+
+    //Asking permission from the health store
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if HKHealthStore.isHealthDataAvailable(){
+            
+            healthStore.requestAuthorizationToShareTypes(typesToShare,
+                readTypes: typesToRead,
+                completion: {(succeeded: Bool, error: NSError!) in
+                    
+                    if succeeded && error == nil{
+                        println("Successfully received authorization")
+                    } else {
+                        if let theError = error{
+                            println("Error occurred = \(theError)")
+                        }
+                    }
+            })
+            
+        } else {
+            println("Health data is not available")
+        }
+        
+    }
     
 
     //MARK: - Actions & Outlets
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var hometownLabel: UILabel!
 
+    @IBAction func ageButton(sender: AnyObject) {
+        let actionMenu = UIAlertController(title: "Age", message: nil, preferredStyle: .ActionSheet)
+    }
+
+    @IBAction func heightButton(sender: AnyObject) {
+        let actionMenu = UIAlertController(title: "height", message: nil, preferredStyle: .ActionSheet)
+    }
+    
+    @IBAction func weightButton(sender: AnyObject) {
+    }
+    
+    @IBAction func genderButton(sender: AnyObject) {
+    }
+    
     @IBOutlet weak var experienceBar: UIProgressView!
+    @IBOutlet weak var progressLabel: UILabel!
+    
     @IBOutlet weak var userPicture: UIImageView!
     
     @IBOutlet weak var tableViewOne: UITableView!

@@ -14,10 +14,12 @@ class UsersFeedTableViewCell: UITableViewCell {
 
     //MARK: - Time
     
+    let timeOfRun = moment([], timeZone: NSTimeZone.localTimeZone(), locale: NSLocale.currentLocale())
     let now = moment(timeZone: NSTimeZone.localTimeZone(), locale: NSLocale.currentLocale())
-    
-    func configureTimeLabel() {
-        timeSinceLabel.text = "\(now)"
+
+    func configureDateAndTimeLabel() {
+        timeSinceLabel.text = "\(timeOfRun! - now)"
+        println("\(timeOfRun! - now)")
     }
     
     //MARK: - Distance
@@ -41,4 +43,9 @@ class UsersFeedTableViewCell: UITableViewCell {
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var mapOfLastRun: MKMapView!
     @IBOutlet weak var timeSinceLabel: UILabel!
+    @IBOutlet weak var dateOfRunLabel: UILabel!
+    
+    @IBAction func shareButton(sender: AnyObject) {
+        //TODO: Set up share actionsheet
+    }
 }
