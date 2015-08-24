@@ -10,6 +10,29 @@ import UIKit
 import SwiftMoment
 import HealthKit
 
+enum HeightUnits: String{
+    case Millimeters = "Millimeters"
+    case Centimeters = "Centimeters"
+    case Meters = "Meters"
+    case Inches = "Inches"
+    case Feet = "Feet"
+    static let allValues = [Millimeters, Centimeters, Meters, Inches, Feet]
+    
+    func healthKitUnit() -> HKUnit{
+        switch self{
+        case .Millimeters:
+            return HKUnit.meterUnitWithMetricPrefix(.Milli)
+        case .Centimeters:
+            return HKUnit.meterUnitWithMetricPrefix(.Centi)
+        case .Meters:
+            return HKUnit.meterUnit()
+        case .Inches:
+            return HKUnit.inchUnit()
+        case .Feet:
+            return HKUnit.footUnit()
+        }
+    }
+}
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate {
 
@@ -175,24 +198,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             
             healthStore.requestAuthorizationToShareTypes(typesToShare,
                 readTypes: typesToRead,
-                completion: {(succeeded: Bool, error: NSError!) in
+                completion: {succeeded, error in
                     
                     if succeeded && error == nil{
-                        println("Successfully received authorization")
+                        print("Successfully received authorization")
                     } else {
                         if let theError = error{
-                            println("Error occurred = \(theError)")
+                            print("Error occurred = \(theError)")
                         }
                     }
+                    
             })
             
         } else {
-            println("Health data is not available")
+            print("Health data is not available")
         }
-        
-    }
-    
-
     //MARK: - Actions & Outlets
 
     @IBAction func ageButton(sender: AnyObject) {

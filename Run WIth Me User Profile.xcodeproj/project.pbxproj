@@ -30,6 +30,7 @@
 		281275531B7DA0C5005150AD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 281275521B7DA0C5005150AD /* SystemConfiguration.framework */; };
 		281275551B7DA0CF005150AD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 281275541B7DA0CF005150AD /* libz.dylib */; };
 		281275571B7DA0EB005150AD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 281275561B7DA0EB005150AD /* libsqlite3.dylib */; };
+		282DB1961B8BE03600C8324A /* AddBurnedCaloriesToDietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282DB1951B8BE03600C8324A /* AddBurnedCaloriesToDietViewController.swift */; };
 		28E9C4871B73F4CE00A7144E /* Users Bio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E9C4861B73F4CE00A7144E /* Users Bio.swift */; };
 		F5080C96CFA94C7D865D1D12 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CE65D5990203A756F0A378 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		281275521B7DA0C5005150AD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		281275541B7DA0CF005150AD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		281275561B7DA0EB005150AD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		282DB1951B8BE03600C8324A /* AddBurnedCaloriesToDietViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBurnedCaloriesToDietViewController.swift; sourceTree = "<group>"; };
 		28E9C4861B73F4CE00A7144E /* Users Bio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Users Bio.swift"; sourceTree = "<group>"; };
 		3B554D5EB706AD1EA3D151A0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		60CE65D5990203A756F0A378 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 		280D81281B71757F00EAA685 /* Run WIth Me User Profile */ = {
 			isa = PBXGroup;
 			children = (
+				282DB1941B8BDFE400C8324A /* Health Data */,
 				281275401B79C3B0005150AD /* Tempo */,
 				280D812B1B71757F00EAA685 /* AppDelegate.swift */,
 				2812752A1B7940C8005150AD /* UserDetailTableViewCell.swift */,
@@ -187,6 +190,14 @@
 				2812753C1B79A056005150AD /* FeedData.swift */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		282DB1941B8BDFE400C8324A /* Health Data */ = {
+			isa = PBXGroup;
+			children = (
+				282DB1951B8BE03600C8324A /* AddBurnedCaloriesToDietViewController.swift */,
+			);
+			name = "Health Data";
 			sourceTree = "<group>";
 		};
 		6F412B0FA5A1B8F8912D9375 /* Frameworks */ = {
@@ -377,6 +388,7 @@
 				28E9C4871B73F4CE00A7144E /* Users Bio.swift in Sources */,
 				280D812C1B71757F00EAA685 /* AppDelegate.swift in Sources */,
 				2812753D1B79A056005150AD /* FeedData.swift in Sources */,
+				282DB1961B8BE03600C8324A /* AddBurnedCaloriesToDietViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
