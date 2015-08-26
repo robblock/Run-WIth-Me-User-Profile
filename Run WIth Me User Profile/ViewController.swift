@@ -35,12 +35,12 @@ enum HeightUnits: String{
 }
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate {
-
+    
     var usersBio: UsersBio!
     var totalCaloriesBurned: TotalCaloriesBurned!
-
     
-    //creating empty array to store users information -- Comment out when we have userlogin and setup feature set up.
+    
+    //creating empty array to store users information -- remove when we have userLogin & Parse setup
     var bio:[UsersBio] = []
     
     override func viewDidLoad() {
@@ -73,9 +73,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             println("Object has been saved.")
         }
-
+        
     }
-
+    
     
     //MARK: - ImagePicker
     let recognizer = UITapGestureRecognizer()
@@ -134,7 +134,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         case 3:
             cell.fieldLabel.text = "Average Pace"
             cell.valueLabel.text = "\(usersBio.averagePace)"
-            case 4:
+        case 4:
             cell.fieldLabel.text = "Total Number of Runs"
             cell.valueLabel.text = "\(usersBio.totalNumberOfRuns)"
         case 5:
@@ -162,65 +162,33 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
+    
     //Mark: - Picker
     
-
+    
     //MARK: - Date Since Last..
     let timeOfRun = moment([], timeZone: NSTimeZone.localTimeZone(), locale: NSLocale.currentLocale())
     let now = moment(timeZone: NSTimeZone.localTimeZone(), locale: NSLocale.currentLocale())
     
-//    func configureDateAndTimeLabel() {
-//        timeSinceLabel.text = "\(timeOfRun! - now)"
-//        println("\(timeOfRun! - now)")
-//    }
+    //    func configureDateAndTimeLabel() {
+    //        timeSinceLabel.text = "\(timeOfRun! - now)"
+    //        println("\(timeOfRun! - now)")
+    //    }
     
     //MARK: - Health Data
-    let heightQuantity = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeight)
-    let weightQuantity = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)
-    let heartRateQuantityt = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate)
     
-    lazy var healthStore = HKHealthStore()
-    
-    lazy var typesToShare: NSSet = {
-        return NSSet(object: self.heightQuantity, self.weightQuantity)
-        }()
-    
-    lazy var typesToRead: NSSet = {
-        return  NSSet(object: self.heightQuantity, self.weightQUantity, self.heartRateQuantity)
-        }()
-    
+    //TODO: Figure out Correct Way to link healthStore
 
-    //Asking permission from the health store
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        if HKHealthStore.isHealthDataAvailable(){
-            
-            healthStore.requestAuthorizationToShareTypes(typesToShare,
-                readTypes: typesToRead,
-                completion: {succeeded, error in
-                    
-                    if succeeded && error == nil{
-                        print("Successfully received authorization")
-                    } else {
-                        if let theError = error{
-                            print("Error occurred = \(theError)")
-                        }
-                    }
-                    
-            })
-            
-        } else {
-            print("Health data is not available")
-        }
+    
     //MARK: - Actions & Outlets
-
+    
     @IBAction func ageButton(sender: AnyObject) {
-        let actionMenu = UIAlertController(title: "Age", message: nil, preferredStyle: .ActionSheet)
+        //TODO: Figure out how to pass the four conditions back and forth between one viewController and save info into respective textFields
+        // prepareForSegue
     }
-
+    
     @IBAction func heightButton(sender: AnyObject) {
-        let actionMenu = UIAlertController(title: "height", message: nil, preferredStyle: .ActionSheet)
+
     }
     
     @IBAction func weightButton(sender: AnyObject) {
@@ -228,6 +196,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func genderButton(sender: AnyObject) {
     }
+    
+    @IBOutlet weak var ageTextField: UITextField!
+    @IBOutlet weak var heightTextField: UITextField!
+    @IBOutlet weak var weightTextField: UITextField!
+    @IBOutlet weak var genderTextField: UITextField!
+    
     
     @IBOutlet weak var experienceBar: UIProgressView!
     @IBOutlet weak var progressLabel: UILabel!

@@ -31,6 +31,9 @@
 		281275551B7DA0CF005150AD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 281275541B7DA0CF005150AD /* libz.dylib */; };
 		281275571B7DA0EB005150AD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 281275561B7DA0EB005150AD /* libsqlite3.dylib */; };
 		282DB1961B8BE03600C8324A /* AddBurnedCaloriesToDietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282DB1951B8BE03600C8324A /* AddBurnedCaloriesToDietViewController.swift */; };
+		282DB1981B8BE81400C8324A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282DB1971B8BE81400C8324A /* HealthKit.framework */; };
+		282DB19A1B8BE89F00C8324A /* Setting up Your App for HealthKit.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 282DB1991B8BE89F00C8324A /* Setting up Your App for HealthKit.entitlements */; };
+		282DB19C1B8BFA1A00C8324A /* HealthDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282DB19B1B8BFA1A00C8324A /* HealthDataViewController.swift */; };
 		28E9C4871B73F4CE00A7144E /* Users Bio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E9C4861B73F4CE00A7144E /* Users Bio.swift */; };
 		F5080C96CFA94C7D865D1D12 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CE65D5990203A756F0A378 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -74,6 +77,9 @@
 		281275541B7DA0CF005150AD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		281275561B7DA0EB005150AD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		282DB1951B8BE03600C8324A /* AddBurnedCaloriesToDietViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBurnedCaloriesToDietViewController.swift; sourceTree = "<group>"; };
+		282DB1971B8BE81400C8324A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		282DB1991B8BE89F00C8324A /* Setting up Your App for HealthKit.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Setting up Your App for HealthKit.entitlements"; path = "../../../../Downloads/iOS-8-Swift-Programming-Cookbook-master/chapter-health/Setting up Your App for HealthKit/Setting up Your App for HealthKit/Setting up Your App for HealthKit.entitlements"; sourceTree = "<group>"; };
+		282DB19B1B8BFA1A00C8324A /* HealthDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthDataViewController.swift; sourceTree = "<group>"; };
 		28E9C4861B73F4CE00A7144E /* Users Bio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Users Bio.swift"; sourceTree = "<group>"; };
 		3B554D5EB706AD1EA3D151A0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		60CE65D5990203A756F0A378 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				282DB1981B8BE81400C8324A /* HealthKit.framework in Frameworks */,
 				281275571B7DA0EB005150AD /* libsqlite3.dylib in Frameworks */,
 				281275551B7DA0CF005150AD /* libz.dylib in Frameworks */,
 				281275531B7DA0C5005150AD /* SystemConfiguration.framework in Frameworks */,
@@ -195,6 +202,8 @@
 		282DB1941B8BDFE400C8324A /* Health Data */ = {
 			isa = PBXGroup;
 			children = (
+				282DB19B1B8BFA1A00C8324A /* HealthDataViewController.swift */,
+				282DB1991B8BE89F00C8324A /* Setting up Your App for HealthKit.entitlements */,
 				282DB1951B8BE03600C8324A /* AddBurnedCaloriesToDietViewController.swift */,
 			);
 			name = "Health Data";
@@ -203,6 +212,7 @@
 		6F412B0FA5A1B8F8912D9375 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				282DB1971B8BE81400C8324A /* HealthKit.framework */,
 				281275561B7DA0EB005150AD /* libsqlite3.dylib */,
 				281275541B7DA0CF005150AD /* libz.dylib */,
 				281275521B7DA0C5005150AD /* SystemConfiguration.framework */,
@@ -312,6 +322,7 @@
 			files = (
 				281275391B797D42005150AD /* UsersFeedTableViewCell.xib in Resources */,
 				280D81311B71757F00EAA685 /* Main.storyboard in Resources */,
+				282DB19A1B8BE89F00C8324A /* Setting up Your App for HealthKit.entitlements in Resources */,
 				280D81361B71757F00EAA685 /* LaunchScreen.xib in Resources */,
 				280D81331B71757F00EAA685 /* Images.xcassets in Resources */,
 			);
@@ -386,6 +397,7 @@
 				2812753F1B79C39D005150AD /* tempo.swift in Sources */,
 				2812752D1B79663B005150AD /* MoreDetailViewController.swift in Sources */,
 				28E9C4871B73F4CE00A7144E /* Users Bio.swift in Sources */,
+				282DB19C1B8BFA1A00C8324A /* HealthDataViewController.swift in Sources */,
 				280D812C1B71757F00EAA685 /* AppDelegate.swift in Sources */,
 				2812753D1B79A056005150AD /* FeedData.swift in Sources */,
 				282DB1961B8BE03600C8324A /* AddBurnedCaloriesToDietViewController.swift in Sources */,
